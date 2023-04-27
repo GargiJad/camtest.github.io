@@ -8,7 +8,11 @@ const share = document.getElementById('share-btn');
 const downloadButton = document.getElementById('download-btn');
 const close = document.getElementById('close-btn');
 const downloadLink = document.getElementById('download-link');
+
+// const toggleBtn = document.getElementById('toggle-btn');
+
 navigator.mediaDevices.getUserMedia({ video: true })
+// navigator.mediaDevices.getUserMedia({ camera: { facingMode: 'environment' } })
 .then((stream) => {
     camera.srcObject = stream;
 })
@@ -16,8 +20,14 @@ navigator.mediaDevices.getUserMedia({ video: true })
     console.error('Error accessing camera:', error);
 });
 
+
+
+
+
+
 // Capture photo when capture button is clicked
 captureBtn.addEventListener('click', () => {
+    
     close.style.display = 'block';
     captureBtn.style.display = 'none';
     downloadButton.style.display = 'block';

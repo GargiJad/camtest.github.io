@@ -2,8 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    
-     
+    z-index: inherit; 
 }
 
 /* Style the camera container */
@@ -13,6 +12,9 @@ body, html {
     overflow: hidden; /* Hide overflow to prevent scrolling */
     position: relative;
     z-index: 1;
+    /* background:transparent; */
+ 
+  
 }
 
 /* Style the video element */
@@ -20,16 +22,37 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+/*     
+    background-size: cover;
+    background-position: center;
+    
+    display: block; */
+    /* z-index: inherit;   */
 }
+
+/* #background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+/*     
+    background-size: cover;
+    background-position: center;
+    
+    display: block; */
+   
+/* } */
+ /* */ 
+
 
 /* Style the capture button */
 #capture-btn {
     position: absolute;
     /* margin: auto; */
     bottom: 10px;
-    left: 35%;
+    left: 37%;
     transform: translateX(10%);
     display: block;
+   
 }
 /* Style the overlay div */
 .overlay {
@@ -46,6 +69,7 @@ body, html {
     transition: opacity 0.5s ease; /* Add a transition effect for opacity */
 }
 
+
 /* Style the captured photo */
 #captured-photo {
     max-width: 100%;
@@ -56,27 +80,21 @@ body, html {
 i.fa.fa-camera.icon {
     font-size: 126px;
 }
-/* Style the buttons container */
-/* .buttons {
-    position: absolute;
-    bottom: 680px;
-    left: 53%;
-    transform: translateX(-50%,);
-    z-index:5;
-}
 
-/* Style the buttons */
-/* .buttons button {
-    margin-right: 20px;
-    font-size: 1.5em; /* Increase font size */
-/* padding: 10px 0px; Increase padding */
   
 #download-btn
 {
+    width: 100px;
+    height: 100px;
+    background-image: url('download.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    outline: none;
     display: none;
     position: absolute;
-    bottom: 680px;
-    left: 70%;
+    bottom: 15px;
+    left: 80%;
     transform: translateX(-50%,);
     z-index:9;
     margin-right: 20px;
@@ -85,10 +103,17 @@ i.fa.fa-camera.icon {
 }
 #share-btn
 {
+    width: 100px;
+    height: 100px;
+    background-image: url('share1.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    outline: none;
     display: none;
     position: absolute;
-    bottom: 680px;
-    left: 61%;
+    bottom: 15px;
+    left: 67%;
     transform: translateX(-50%,);
     z-index:5;
     margin-right: 20px;
@@ -96,10 +121,16 @@ i.fa.fa-camera.icon {
     padding: 10px 0px; /* Increase padding */
 }
 #close-btn
-{
+{width: 100px;
+    height: 100px;
+    background-image: url('close.jpg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    outline: none;
     display: none;
     position: absolute;
-    bottom: 680px;
+    bottom: 15px;
     left: 54%;
     transform: translateX(-50%,);
     z-index:5;
@@ -107,4 +138,14 @@ i.fa.fa-camera.icon {
     font-size: 1.5em; /* Increase font size */
     padding: 10px 0px; /* Increase padding */
 }
- 
+/* #toggle-btn{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 74%;
+    transform: translateX(-50%,);
+    z-index:5;
+    margin-right: 20px;
+    font-size: 1.5em; /* Increase font size */
+    /* padding: 10px 0px; Increase padding */
+
