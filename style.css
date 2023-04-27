@@ -1,0 +1,110 @@
+ /* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    
+     
+}
+
+/* Style the camera container */
+.camera-container {
+    width: 100vw; /* Set width to 100vw to make it full screen */
+    height: 100vh; /* Set height to 100vh to make it full screen */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the video element */
+#camera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style the capture button */
+#capture-btn {
+    position: absolute;
+    /* margin: auto; */
+    bottom: 10px;
+    left: 35%;
+    transform: translateX(10%);
+    display: block;
+}
+/* Style the overlay div */
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Prevent overlay div from capturing pointer events */
+    opacity: 0; /* Hide overlay by default */
+    transition: opacity 0.5s ease; /* Add a transition effect for opacity */
+}
+
+/* Style the captured photo */
+#captured-photo {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    top: 25%;
+}
+i.fa.fa-camera.icon {
+    font-size: 126px;
+}
+/* Style the buttons container */
+/* .buttons {
+    position: absolute;
+    bottom: 680px;
+    left: 53%;
+    transform: translateX(-50%,);
+    z-index:5;
+}
+
+/* Style the buttons */
+/* .buttons button {
+    margin-right: 20px;
+    font-size: 1.5em; /* Increase font size */
+/* padding: 10px 0px; Increase padding */
+  
+#download-btn
+{
+    display: none;
+    position: absolute;
+    bottom: 680px;
+    left: 70%;
+    transform: translateX(-50%,);
+    z-index:9;
+    margin-right: 20px;
+    font-size: 1.5em; /* Increase font size */
+    padding: 10px 0px; /* Increase padding */
+}
+#share-btn
+{
+    display: none;
+    position: absolute;
+    bottom: 680px;
+    left: 61%;
+    transform: translateX(-50%,);
+    z-index:5;
+    margin-right: 20px;
+    font-size: 1.5em; /* Increase font size */
+    padding: 10px 0px; /* Increase padding */
+}
+#close-btn
+{
+    display: none;
+    position: absolute;
+    bottom: 680px;
+    left: 54%;
+    transform: translateX(-50%,);
+    z-index:5;
+    margin-right: 20px;
+    font-size: 1.5em; /* Increase font size */
+    padding: 10px 0px; /* Increase padding */
+}
+ 
